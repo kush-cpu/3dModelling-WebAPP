@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Modeling App - Made by Kush</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Select Primitive</h3>
+            <button id="addCube">Cube</button>
+            <button id="addSphere">Sphere</button>
+            <button id="addCone">Cone</button>
+
+            <h3>Modifiers</h3>
+            <label>Chamfer: <input id="chamfer" type="range" min="0" max="5" step="0.1"></label>
+            <label>Bevel: <input id="bevel" type="range" min="0" max="5" step="0.1"></label>
+
+            <h3>Material Editor</h3>
+            <label>Color: <input id="colorPicker" type="color"></label>
+            
+            <h3>Lighting</h3>
+            <button id="addDirectionalLight">Add Directional Light</button>
+            <button id="addSpotLight">Add Spot Light</button>
+            <button id="addAreaLight">Add Area Light</button>
+        </div>
+
+        <div class="viewport">
+            <canvas id="webglCanvas"></canvas>
+            <div class="appName">Made by Kush</div>
+        </div>
+    </div>
+
+    <!-- Import Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Import OrbitControls from CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r128/examples/js/controls/OrbitControls.js"></script>
+
+    <!-- Import your app logic -->
+    <script src="app.js"></script>
+</body>
+</html>
